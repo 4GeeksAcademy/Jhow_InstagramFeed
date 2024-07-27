@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Instagram Feed</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fa-brands fa-instagram p-1"></i>Instagram
+        </a>
+        <!-- Modal -->
+        <button
+          type="button"
+          class="btn btn-success ms-auto"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-whatever="@getbootstrap"
+        >
+          Create New Post
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Create New Post
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Caption:</label>
+                    <textarea class="form-control" id="message-text">
+text the caption of your post here</textarea>
+                  </div>
+                  <div class="icons">
+                    <i
+                      class="fa-solid fa-camera p-1 border border-secondary-subtle bg-light"
+                    ></i>
+                    <i
+                      class="fa-solid fa-location-dot p-1 border border-secondary-subtle bg-light"
+                    ></i>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div><!-- cierre del modal-->
+        <!-- inicio del dropdown-->
+        <div class="dropdown dropstart p-1">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+            <li>
+              <a
+                class="dropdown-item border-bottom border-body-secondary"
+                href="#"
+              >Privacy and Data</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item text-danger pe-2" href="#">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div><!-- cierre del dropdown-->
+    </nav>
+    <!-- Cierre de la navbar -->
+
+    <nav>
+      <div
+        class="nav nav-tabs border border-0 position-absolute top-20 start-50 translate-middle-x p-0"
+        id="nav-tab"
+        role="tablist"
+      >
+        <button
+          class="nav-link active border border-0"
+          id="nav-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-home"
+          type="button"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+        >
+          <i class="fa-solid fa-grip"></i>
+        </button>
+        <button
+          class="nav-link border border-0"
+          id="nav-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-profile"
+          type="button"
+          role="tab"
+          aria-controls="nav-profile"
+          aria-selected="false"
+        >
+          <i class="fa-solid fa-grip-lines-vertical"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Cierre de la nav&tab Solo la barra (iconos)-->
+<!-- contenido de la primera pestaña-->
+    <div class="tab-content my-4 p-1" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-home"
+        role="tabpanel"
+        aria-labelledby="nav-home-tab"
+        tabindex="0"
+      >
+        <div class="container-fluid mx-3 my-1">
+          <div class="row">
+            <div class="col-12 text-center p-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-4 p-1">
+              <img
+                src="https://static.nationalgeographic.es/files/styles/image_3200/public/75552.ngsversion.1422285553360.jpg?w=1900&h=1267"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://urgenciesveterinaries.com/wp-content/uploads/2023/09/survet-gato-caida-pelo-01.jpeg"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://static.nationalgeographic.es/files/styles/image_3200/public/01-cat-groom-nationalgeographic-1031934.jpg?w=1600"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://www.zooplus.es/magazine/wp-content/uploads/2022/01/Psicologia-felina.jpeg"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://es.mypet.com/wp-content/uploads/sites/23/2021/03/GettyImages-623368750-e1582816063521-1.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://img.huffingtonpost.es/files/image_720_480/files/fp/uploads/2023/01/15/63c398dea0d20.r_d.1531-990-3008.jpeg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://www.tiendanimal.es/articulos/wp-content/uploads/2024/02/nombres-para-gatos-originales.jpg"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2021/03/23/16164882584432.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                src="https://estaticos-cdn.prensaiberica.es/clip/9311c47b-e3ff-4250-a4be-a869326b0abf_source-aspect-ratio_default_0.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div><!-- cierre de la primera pestaña-->
+      <!-- contenido de la segunda pestaña vista card-->
+      <div 
+        class="tab-pane fade my-2 position-absolute top-20 start-50 translate-middle-x p-1"
+        id="nav-profile"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+        tabindex="0"
+      >
+        <div class="card mt-2" style="width: 30rem;">
+          <div class="header mt-2 mx-3">
+            <h5>Fold Escocés</h5>
+          </div>
+          <img
+            src="https://static.nationalgeographic.es/files/styles/image_3200/public/75552.ngsversion.1422285553360.jpg?w=1900&h=1267"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="Likes"><strong>106 Likes</strong></p>
+            <p class="card-text">
+              El Fold escocés es una raza de gato originaria de Escocia, Reino Unido, de una estructura ósea mediana y una gran musculatura. Posee pies redondos y una cola gruesa de tamaño medio. Su cabeza es muy redondeada, con las pequeñas orejas plegadas.
+            </p>
+          </div>
+        </div>
+        <div class="card my-2" style="width: 30rem;">
+          <div class="header mt-2 mx-3">
+            <h5>Persa de Pelo Largo</h5>
+          </div>
+          <img
+            src="https://urgenciesveterinaries.com/wp-content/uploads/2023/09/survet-gato-caida-pelo-01.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="Likes"><strong>204 Likes</strong></p>
+            <p class="card-text">
+              Los gatos persas de pelo largo son gatos fornidos de tamaño mediano con una cabeza muy grande en proporción a su cuerpo. Tienen la cabeza redondeada y ancha, las orejas pequeñas y separadas, y la cara corta y despejada.
+            </p>
+          </div>
+        </div>
+        <div class="card my-2" style="width: 30rem;">
+          <div class="header mt-2 mx-3">
+            <h5>Gato doméstico</h5>
+          </div>
+          <img
+            src="https://static.nationalgeographic.es/files/styles/image_3200/public/01-cat-groom-nationalgeographic-1031934.jpg?w=1600"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="Likes"><strong>95 Likes</strong></p>
+            <p class="card-text">
+              El gato doméstico​​ llamado más comúnmente gato, y de forma coloquial minino, ​ michino, ​ y algunos nombres más, es un mamífero carnívoro de la familia Felidae. El nombre actual en muchas lenguas proviene del latín vulgar catus.
+            </p>
+          </div>
+        </div>
+        <div class="card my-2" style="width: 30rem;">
+          <div class="header mt-2 mx-3">
+            <h5>Gato Atigrado</h5>
+          </div>
+          <img
+            src="https://www.zooplus.es/magazine/wp-content/uploads/2022/01/Psicologia-felina.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="Likes"><strong>320 Likes</strong></p>
+            <p class="card-text">
+              Un gato atigrado o tabby​ es un gato con un distintivo pelaje de rayas y manchas características. Estos gatos pueden poseer ojos verdes, dorados o azules y un pelaje de color gris, naranja, marrón o negro​ que puede presentarse solo o en combinación con el color blanco.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cierre vista card -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
